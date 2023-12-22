@@ -1,0 +1,9 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// page blocks connection
+@import "./components/header";
+
+// page components connection
