@@ -1,3 +1,24 @@
 <header class="header">
-  <div class="container"></div>
+  <div class="header__container container">
+    <a class="header-logo" href="#">
+      <img class="header-logo-image" src="img/logo.svg" alt="Kropp logo" width="135" height="25" loading="lazy">
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <ul class="nav__list list-reset">
+        <li class="nav__item"><a href="#" class="nav__link is-current">Home</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Pages</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Shop</a></li>
+      </ul>
+    </nav>
+    <div class="header__user-nav">
+      <button class="header__btn btn btn-reset" type="button">Book now</button>
+      <button class="header__burger btn-reset" type="button" aria-label="Open menu" title="Open menu">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+    </div>
+  </div>
 </header>

@@ -1,13 +1,31 @@
 :root {
   // base
-  --font-family: "Gilroy", sans-serif;
-  --content-width: 1170px;
+  --font-family-base: "Heebo", sans-serif;
+  --font-family-accent: "Yantramanav", sans-serif;
+  --content-width: 1300px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
-  --light: #ffffff;
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --color-dark-alternate: #131619;
+  --color-dark-gray: #404040;
+  --color-light-gray: #c4c4c4;
 
-  //size
+  // border-radius
+  --border-radius: 30px;
+
+  // border
+  --border: 1px solid var(--color-light);
+
+  // height
+  --header-height: 90px;
+  --input-height: 54px;
+
+  // gap
   --gap: 25px;
+
+  // transition
+  --transition-duration: 0.3s;
 }

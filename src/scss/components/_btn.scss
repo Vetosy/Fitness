@@ -1,0 +1,22 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  height: 38px;
+  padding-inline: 26px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-duration) ease;
+
+  @include hover {
+    background-color: var(--color-light-gray);
+  }
+
+  @include mobile {
+    padding-inline: 18px;
+  }
+}
