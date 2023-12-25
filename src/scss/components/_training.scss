@@ -1,0 +1,55 @@
+.training {
+  position: relative;
+  max-width: 1920px;
+  margin-inline: auto;
+  padding: 70px 15px 120px;
+  background-color: var(--color-dark);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 60px;
+
+    @include small-desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    --training-bg-icon-size: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+    padding-top: var(--training-bg-icon-size);
+    background: url(../img/transparent-arrow-bottom-left.svg) 100% 0 / var(--training-bg-icon-size) no-repeat;
+
+    @include small-tablet {
+      --training-bg-icon-size: 50px;
+      row-gap: 10px;
+    }
+  }
+
+  &__img {
+    @include small-tablet {
+      max-width: 120px;
+    }
+  }
+
+  &__title {
+    color: var(--color-light);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.75;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-top: auto;
+  }
+}

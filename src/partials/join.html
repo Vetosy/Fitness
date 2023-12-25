@@ -1,0 +1,31 @@
+<section class="join">
+  <div class="join__wrapper">
+    <video class="join__video" src="" width="960" height="600" poster="img/join/join-poster.jpg"></video>
+    <button class="join__btn btn-reset" type="button">Play</button>
+  </div>
+  <div class="join__content container">
+    <h2 class="join__title">Join us</h2>
+    <form class="join__form" id="join-form" method="POST" action="#">
+      <div class="join__form-header">
+        <h3 class="join__form-title title title--big backdrop-title backdrop-title--centered" data-title="Go!">Start
+          here</h3>
+        <div class="join__form-text">
+          <p>fill the form below to start your journey</p>
+        </div>
+      </div>
+      <div class="join__form-body">
+        <label class="join__form-label visually-hidden" for="username">
+          Name
+        </label>
+        <input class="join__form-input input input-reset" type="text" name="name" aria-required="true" required
+          autocomplete="name" title="Please enter your full name" id="username" placeholder="Name">
+        <label class="join__form-label visually-hidden" for="email">
+          Email
+        </label>
+        <input class="join__form-input input input-reset" type="email" name="email" aria-required="true" required
+          autocomplete="email" title="Enter your email" id="email" placeholder="Email">
+        <button class="join__form-btn btn btn-reset btn-transparent" type="submit" form="join-form">Subscribe</button>
+      </div>
+    </form>
+  </div>
+</section>

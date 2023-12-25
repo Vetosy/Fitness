@@ -1,0 +1,149 @@
+.join {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 30px;
+    background: url(../img/join/join-bg.jpg) center/cover no-repeat var(--color-dark-alternate);
+
+    @include mobile {
+      padding: 70px 30px;
+    }
+  }
+
+  &__video {
+    max-width: 960px;
+    width: 100%;
+    height: auto;
+  }
+
+  &__btn {
+    position: absolute;
+    inset: 1;
+    width: 200px;
+    aspect-ratio: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    background-color: transparent;
+    border: var(--border);
+    border-radius: 50%;
+    color: var(--color-light);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    transition: color var(--transition-duration) ease, border var(--transition-duration) ease;
+
+    &::after {
+      content: "";
+      width: 26px;
+      aspect-ratio: 1;
+      background: url(../img/arrow-top-right.svg) center/contain no-repeat;
+      transition: filter var(--transition-duration) ease;
+    }
+
+    @include hover {
+      color: var(--color-dark);
+      border: 1px solid var(--color-dark);
+
+      &::after {
+        filter: invert(1);
+      }
+    }
+
+    @include small-tablet {
+      width: 140px;
+    }
+  }
+
+  &__content {
+    padding-bottom: 150px;
+
+    @include tablet {
+      padding-bottom: 80px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin-top: -0.4em;
+    color: var(--color-light);
+    font-size: clamp(64px, 9.37vw, 180px);
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 0.7em;
+      aspect-ratio: 1;
+      background: url(../img/bold-arrow-down.svg) center/contain no-repeat;
+      scale: 1 -1;
+      margin-left: 0.14em;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 130px;
+    }
+
+    @include tablet {
+      &:not(:last-child) {
+        margin-bottom: 80px;
+      }
+    }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7px;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__form-body {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+
+    @include small-tablet {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  &__form-text {
+    color: var(--color-light);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.65;
+    text-transform: uppercase;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__form-input {
+    max-width: 400px;
+
+    @include small-tablet {
+      max-width: 100%;
+    }
+  }
+}
