@@ -37,7 +37,7 @@
     "gulp-rev": "^9.0.0",
     "gulp-rev-delete-original": "^0.2.3",
     "gulp-rev-rewrite": "^4.0.0",
-    "gulp-sass": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^4.1.0",
     "gulp-typograf": "^4.0.3",
@@ -45,7 +45,7 @@
     "gulp-zip": "^5.1.0",
     "postcss": "^8.4.5",
     "postcss-scss": "^4.0.2",
-    "sass": "^1.45.1",
+    "sass": "^1.69.5",
     "typograf": "^6.14.1",
     "webpack": "^5.65.0",
     "webpack-stream": "^7.0.0"
