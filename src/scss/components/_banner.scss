@@ -43,7 +43,6 @@
   }
 
   &-title {
-    margin: 0;
     color: currentColor;
     font-size: min(18.75vw, 360px);
     font-weight: 700;
@@ -53,7 +52,7 @@
   &-pagination__list {
     display: flex;
     justify-content: center;
-    column-gap: 10px;
+    column-gap: 5px;
   }
 
   &-pagination__item {
@@ -64,7 +63,7 @@
     display: inline-flex;
     justify-content: center;
     background-color: transparent;
-    padding: 15px;
+    padding: 10px;
 
     &::after {
       content: "";

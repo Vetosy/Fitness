@@ -1,0 +1,96 @@
+.motivation {
+  &__item {
+    &:nth-child(even) {
+      background-color: var(--color-dark-alternate);
+
+      & .motivation__card {
+        flex-direction: row-reverse;
+
+        @include small-tablet {
+          flex-direction: column-reverse;
+          row-gap: 30px;
+        }
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: clamp(30px, 10.42vw, 200px);
+
+    @include tablet {
+      padding-block: 50px;
+    }
+
+    @include small-tablet {
+      padding-block: 30px;
+      flex-direction: column-reverse;
+      row-gap: 30px;
+    }
+  }
+
+  &__card-content {
+    padding-left: 35px;
+  }
+
+  &__card-title {
+    max-width: 481px;
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+
+    &--even {
+      max-width: 365px;
+
+      &:not(:last-child) {
+        margin-bottom: 17px;
+      }
+    }
+  }
+
+  &__card-text {
+    max-width: 387px;
+
+    &:not(:last-child) {
+      margin-bottom: 37px;
+    }
+
+    @include small-tablet {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--even {
+      max-width: 400px;
+    }
+
+    p {
+      color: var(--color-light-gray);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.75;
+      letter-spacing: 0.8px;
+    }
+  }
+
+  &__card-img {
+    margin-block: -60px;
+
+    @include huge-desktop {
+      margin-block: -20px;
+    }
+
+    @include tablet {
+      max-width: 30%;
+      margin-block: 0;
+    }
+
+    @include small-tablet {
+      max-width: 60%;
+    }
+  }
+}

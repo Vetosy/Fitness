@@ -19,4 +19,31 @@
   @include mobile {
     padding-inline: 18px;
   }
+
+  &-transparent {
+    position: relative;
+    height: var(--input-height);
+    padding-left: 31px;
+    padding-right: 80px;
+    background-color: transparent;
+    border: var(--border);
+    color: var(--color-light);
+    transition: color var(--transition-duration) ease, background-color var(--transition-duration) ease;
+
+    @include hover {
+      color: var(--color-dark);
+      background-color: var(--color-light-gray);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      height: 100%;
+      aspect-ratio: 1;
+      background: url(../img/arrow-top-right.svg) center/70% no-repeat;
+      border: var(--border);
+      border-radius: 50%;
+    }
+  }
 }
