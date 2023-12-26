@@ -1,4 +1,6 @@
 .join {
+  background-color: var(--color-dark-alternate);
+
   &__wrapper {
     position: relative;
     display: flex;
@@ -123,19 +125,6 @@
     @include small-tablet {
       flex-direction: column;
       row-gap: 20px;
-    }
-  }
-
-  &__form-text {
-    color: var(--color-light);
-    text-align: center;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 1.65;
-    text-transform: uppercase;
-
-    @include mobile {
-      font-size: 16px;
     }
   }
 

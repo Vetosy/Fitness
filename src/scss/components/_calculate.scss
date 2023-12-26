@@ -1,0 +1,165 @@
+.calculate {
+  background-color: var(--color-dark-alternate);
+  padding-block: 146px;
+
+  @include tablet {
+    padding-block: 100px;
+  }
+
+  @include small-tablet {
+    padding-block: 60px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    column-gap: 36px;
+
+    @include tablet {
+      column-gap: 20px;
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    max-width: 627px;
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    max-width: 385px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__form-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 30px;
+
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__form-btn {
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &-table-wrapper {
+    position: relative;
+    max-width: 610px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      width: 100%;
+      aspect-ratio: 1;
+      background-color: var(--color-dark);
+      border-radius: 50%;
+
+      @include small-tablet {
+        display: none;
+      }
+    }
+  }
+
+  &-table {
+    position: relative;
+    border-collapse: collapse;
+
+    th {
+      color: var(--color-light);
+      padding-block: 20px;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    td {
+      padding-block: 15px;
+      color: var(--color-light-gray);
+    }
+
+    tbody {
+      td {
+        border-top: 1px solid var(--color-light-gray);
+      }
+
+      tr {
+        &:last-child {
+          & td {
+            &:first-child {
+              position: relative;
+
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 70%;
+                height: 1px;
+                background-color: var(--color-light-gray);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    tfoot {
+      color: var(--color-light);
+
+      td {
+        padding-top: 33px;
+        padding-bottom: 0;
+        color: currentColor;
+
+        @include tablet {
+          padding-top: 15px;
+        }
+      }
+    }
+
+    & :is(td, th) {
+      padding-right: 30px;
+
+      @include tablet {
+        padding-block: 10px;
+      }
+    }
+
+    & :is(td, th):not(:first-child) {
+      padding-left: 30px;
+    }
+
+    & :is(td, th):not(:last-child) {
+      border-right: 1px solid var(--color-light-gray);
+    }
+  }
+}

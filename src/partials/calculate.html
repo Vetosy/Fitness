@@ -1,0 +1,82 @@
+<section class="calculate">
+  <div class="calculate__inner container">
+    <div class="calculate__content">
+      <h2 class="calculate__title title backdrop-title" data-title="BMI">
+        Input your <abbr title="Body mass index">BMI</abbr>
+      </h2>
+      <div class="calculate__text text">
+        <p>Duo graece ponderum ne, ei mel aliquando. Pro te tamquam nonumes, nam no nemore epicurei</p>
+      </div>
+      <form class="calculate__form" action="#" id="calculate-form" method="POST">
+        <div class="calculate__form-wrapper">
+          <label class="calculate__form-label visually-hidden" for="calculate-height">
+            Height / cm
+          </label>
+          <input class="calculate__form-input input input-reset" type="number" name="Height / cm" aria-required="true"
+            required autocomplete="off" title="Please enter your Height / cm" id="calculate-height"
+            placeholder="Height / cm">
+          <label class="calculate__form-label visually-hidden" for="calculate-weight">
+            Weight / kg
+          </label>
+          <input class="calculate__form-input input input-reset" type="number" name="Weight / kg" aria-required="true"
+            required autocomplete="off" title="Please enter your Weight / kg" id="calculate-weight"
+            placeholder="Weight / kg">
+          <label class="calculate__form-label visually-hidden" for="calculate-age">
+            Age
+          </label>
+          <input class="calculate__form-input input input-reset" type="number" name="Age" aria-required="true" required
+            autocomplete="off" title="Please enter your age" id="calculate-age" placeholder="Age">
+          <label class="calculate__form-label visually-hidden" for="calculate-gender">Gender</label>
+          <select class="calculate__form-input input" name="gender" id="calculate-gender" required aria-required="true"
+            form="calculate-form" title="Please choose your gender">
+            <option value="" disabled selected>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <label class="calculate__form-label visually-hidden" for="calculate-factor">activity factor</label>
+          <select class="calculate__form-input input input--big" name="activity factor" id="calculate-factor" required
+            aria-required="true" form="calculate-form" title="Please choose your activity factor">
+            <option value="" disabled selected>Select an activity factor:</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <button class="calculate__form-btn btn btn-reset btn-transparent" type="submit"
+          form="calculate-form">Calculate</button>
+      </form>
+    </div>
+    <div class="calculate-table-wrapper">
+      <table class="calculate-table">
+        <thead>
+          <tr>
+            <th><abbr title="Body mass index">BMI</abbr></th>
+            <th>Weight status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Below 18.5</td>
+            <td>Underweight</td>
+          </tr>
+          <tr>
+            <td>18.5 - 24.9</td>
+            <td>Healthy</td>
+          </tr>
+          <tr>
+            <td>25.0 - 29.9</td>
+            <td>Overweight</td>
+          </tr>
+          <tr>
+            <td>30.0 - and Above</td>
+            <td>Obese</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2"> <b>BMR</b> Metabolic Rate / <b>BMI</b> Body Mass Index</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</section>

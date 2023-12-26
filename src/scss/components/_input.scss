@@ -7,6 +7,10 @@
   border-radius: var(--border-radius);
   color: var(--color-light);
 
+  &--big {
+    grid-column: 2 span;
+  }
+
   &::placeholder {
     color: var(--color-light-gray);
   }
@@ -20,3 +24,7 @@
     border-color: var(--color-light);
   }
 }
+
+// select.input:invalid {
+//   color: var(--color-light-gray);
+// }

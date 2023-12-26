@@ -1,0 +1,42 @@
+.location {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include tablet {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 15px;
+    text-align: center;
+
+    @include small-tablet {
+      padding-block: 40px;
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+
+    @include small-tablet {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 490px;
+
+    &:not(:last-child) {
+      margin-bottom: 37px;
+    }
+  }
+}
