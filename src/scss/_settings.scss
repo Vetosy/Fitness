@@ -110,11 +110,11 @@ abbr[title] {
   top: -200px;
   left: 15px;
   transition: top 0.3s ease;
-  color: currentColor;
+  color: var(--color-light);
 
   &:focus {
     top: 15px;
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--color-light);
     outline-offset: 4px;
   }
 }

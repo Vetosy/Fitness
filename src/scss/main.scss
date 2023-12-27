@@ -3,6 +3,11 @@
 @import "fonts";
 @import "settings";
 
+// page components connection
+@import "./components/nav";
+@import "./components/btn";
+@import "./components/input";
+
 // page blocks connection
 @import "./components/header";
 @import "./components/banner";
@@ -13,8 +18,3 @@
 @import "./components/family";
 @import "./components/calculate";
 @import "./components/footer";
-
-// page components connection
-@import "./components/nav";
-@import "./components/btn";
-@import "./components/input";
