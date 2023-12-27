@@ -1,1 +1,409 @@
-<!DOCTYPE html><html lang="ru" class="page"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="theme-color" content="#111111"><title>Fitness</title><link rel="preload" href="fonts/HeeboLight.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/HeeboBold.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/YantramanavBold.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="css/vendor.css"><link rel="stylesheet" href="css/main.css"><script defer="defer" src="js/main.js"></script></head><body class="page__body"><a class="skiplink" href="#" data-scroll data-menu-item>Go to main content</a><div class="site-container"><header class="header"><div class="header__container container"><a class="header-logo" href="#"><img class="header-logo-image" src="img/logo.svg" alt="Kropp logo" width="135" height="25" loading="lazy"></a><nav class="nav" aria-label="Main navigation"><ul class="nav__list list-reset"><li class="nav__item"><a href="#" class="nav__link is-current">Home</a></li><li class="nav__item"><a href="#" class="nav__link">Pages</a></li><li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li><li class="nav__item"><a href="#" class="nav__link">Blog</a></li><li class="nav__item"><a href="#" class="nav__link">Shop</a></li></ul></nav><div class="header__user-nav"><button class="header__btn btn btn-reset" type="button">Book now</button> <button class="header__burger btn-reset" type="button" aria-label="Open menu" title="Open menu"><span class="header__burger-line"></span> <span class="header__burger-line"></span> <span class="header__burger-line"></span></button></div></div></header><main class="main"><h1 class="visually-hidden">Kropp Fitness Club</h1><section class="banner"><h2 class="visually-hidden">Upcoming events</h2><div class="banner-body"><div class="banner-info">New event<br>coming up / <time datetime="06-07">june 7</time> — <time datetime="06-13">13</time></div><h3 class="banner-title">Crossfit</h3></div><div class="banner-pagination"><ul class="banner-pagination__list list-reset"><li class="banner-pagination__item"><button class="banner-pagination__btn btn-reset" type="button" aria-label="Click to navigation"></button></li><li class="banner-pagination__item"><button class="banner-pagination__btn btn-reset" type="button" aria-label="Click to navigation"></button></li><li class="banner-pagination__item"><button class="banner-pagination__btn btn-reset is-current" type="button" aria-label="Click to navigation"></button></li></ul></div></section><section class="motivation"><h2 class="visually-hidden">Motivation</h2><ul class="motivation__list list-reset"><li class="motivation__item"><div class="motivation__card container"><div class="motivation__card-content"><h3 class="motivation__card-title title backdrop-title" data-title="Strong">Be you, just stronger! Power is in you</h3><div class="motivation__card-text"><p>Unum solum justo ex ius. Pro cu probo laboramus eius insolens euripidis te eos, ut agam tota.</p></div><a class="motivation__card-btn btn btn-reset btn-transparent" href="#">View more</a></div><img class="motivation__card-img" src="img/motivation/motivation-card-1.jpg" alt="man pulling up on a bar" width="518" height="760"></div></li><li class="motivation__item"><div class="motivation__card container"><div class="motivation__card-content"><h3 class="motivation__card-title motivation__card-title--even title backdrop-title" data-title="Start">Today is the best day to start!</h3><div class="motivation__card-text motivation__card-text--even"><p>Sed abhorreant constituam consectetuer eu. At mei clita deserunt, his movet molestie nemore.</p></div><a class="motivation__card-btn btn btn-reset btn-transparent" href="#">View more</a></div><img class="motivation__card-img" src="img/motivation/motivation-card-2.jpg" alt="man with dumbbells" width="518" height="760"></div></li></ul></section></main><footer class="footer"><div class="container"></div></footer><div class="overlay" data-menu-overlay></div></div></body></html>
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Fitness</title>
+  <link rel="preload" href="fonts/HeeboLight.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/HeeboBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/YantramanavBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <a class="skiplink" href="#main" data-scroll data-menu-item>Go to main content</a>
+  <div class="site-container">
+    <header class="header">
+  <div class="header__container container">
+    <a class="header-logo" href="#">
+      <img class="header-logo-image" src="img/logo.svg" alt="Kropp logo" width="135" height="25" loading="lazy">
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <ul class="nav__list list-reset">
+        <li class="nav__item"><a href="#" class="nav__link is-current">Home</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Pages</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Shop</a></li>
+      </ul>
+    </nav>
+    <div class="header__user-nav">
+      <button class="header__btn btn btn-reset" type="button" title="Open modal menu">Sale</button>
+      <button class="header__burger btn-reset" type="button" aria-label="Open menu" title="Open menu">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+    <main class="main" id="main">
+      <h1 class="visually-hidden">Kropp Fitness Club</h1>
+      <section class="banner">
+  <h2 class="visually-hidden">Upcoming events</h2>
+  <div class="banner-body">
+    <div class="banner-info">
+      New event <br />
+      coming up / <time datetime="06-07">june 7</time> — <time datetime="06-13">13</time>
+    </div>
+    <h3 class="banner-title">Crossfit</h3>
+  </div>
+  <div class="banner-pagination">
+    <ul class="banner-pagination__list list-reset">
+      <li class="banner-pagination__item">
+        <button class="banner-pagination__btn btn-reset" type="button" aria-label="Click to navigation"></button>
+      </li>
+      <li class="banner-pagination__item">
+        <button class="banner-pagination__btn btn-reset" type="button" aria-label="Click to navigation"></button>
+      </li>
+      <li class="banner-pagination__item">
+        <button class="banner-pagination__btn btn-reset is-current" type="button"
+          aria-label="Click to navigation"></button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="motivation">
+  <h2 class="visually-hidden">Motivation</h2>
+  <ul class="motivation__list list-reset">
+    <li class="motivation__item">
+      <div class="motivation__card container">
+        <div class="motivation__card-content">
+          <h3 class="motivation__card-title title backdrop-title" data-title="Strong">
+            Be you, just stronger! Power is in you
+          </h3>
+          <div class="motivation__card-text text">
+            <p>Unum solum justo ex ius. Pro cu probo laboramus eius insolens euripidis te eos, ut agam tota.</p>
+          </div>
+          <a class="motivation__card-btn btn btn-reset btn-transparent" href="#">View more</a>
+        </div>
+        <img class="motivation__card-img" src="img/motivation/motivation-card-1.jpg" alt="man pulling up on a bar"
+          width="518" height="760" loading="lazy">
+      </div>
+    </li>
+    <li class="motivation__item">
+      <div class="motivation__card container">
+        <div class="motivation__card-content">
+          <h3 class="motivation__card-title motivation__card-title--even title backdrop-title" data-title="Start">
+            Today is the best day to start!
+          </h3>
+          <div class="motivation__card-text motivation__card-text--even text">
+            <p>Sed abhorreant constituam consectetuer eu. At mei clita deserunt, his movet molestie nemore.</p>
+          </div>
+          <a class="motivation__card-btn btn btn-reset btn-transparent" href="#">View more</a>
+        </div>
+        <img class="motivation__card-img" src="img/motivation/motivation-card-2.jpg" alt="man with dumbbells"
+          width="518" height="760" loading="lazy">
+      </div>
+    </li>
+  </ul>
+</section>
+
+      <section class="training container-wide">
+  <h2 class="visually-hidden">Types of training</h2>
+  <ul class="training__list list-reset">
+    <li class="training__item">
+      <img class="training__img" src="img/training/training-type-1.svg" alt="" aria-hidden="true" width="150"
+        height="140" loading="lazy">
+      <h3 class="training__title">Maxpump</h3>
+    </li>
+    <li class="training__item">
+      <img class="training__img" src="img/training/training-type-2.svg" alt="" aria-hidden="true" width="150"
+        height="140" loading="lazy">
+      <h3 class="training__title">aron gym</h3>
+    </li>
+    <li class="training__item">
+      <img class="training__img" src="img/training/training-type-3.svg" alt="" aria-hidden="true" width="150"
+        height="140" loading="lazy">
+      <h3 class="training__title">fit & tone</h3>
+    </li>
+    <li class="training__item">
+      <img class="training__img" src="img/training/training-type-4.svg" alt="" aria-hidden="true" width="150"
+        height="140" loading="lazy">
+      <h3 class="training__title">forza</h3>
+    </li>
+    <li class="training__item">
+      <img class="training__img" src="img/training/training-type-5.svg" alt="" aria-hidden="true" width="150"
+        height="140" loading="lazy">
+      <h3 class="training__title">balance fitness</h3>
+    </li>
+    <li class="training__item">
+      <img class="training__img" src="img/training/training-type-6.svg" alt="" aria-hidden="true" width="150"
+        height="140" loading="lazy">
+      <h3 class="training__title">body sculpt</h3>
+    </li>
+  </ul>
+</section>
+
+      <section class="join">
+  <div class="join__wrapper">
+    <video class="join__video" src="" width="960" height="600" poster="img/join/join-poster.jpg"></video>
+    <button class="join__btn btn-reset" type="button" title="Play video" aria-label="Play video">Play</button>
+  </div>
+  <div class="join__content container">
+    <h2 class="join__title">Join us</h2>
+    <form class="join__form" id="join-form" method="POST" action="#">
+      <div class="join__form-header">
+        <h3 class="join__form-title title title--big backdrop-title backdrop-title--centered" data-title="Go!">Start
+          here</h3>
+        <div class="join__form-text section-descr">
+          <p>fill the form below to start your journey</p>
+        </div>
+      </div>
+      <div class="join__form-body">
+        <label class="join__form-label visually-hidden" for="username">
+          Name
+        </label>
+        <input class="join__form-input input input-reset" type="text" name="name" aria-required="true" required
+          autocomplete="name" title="Please enter your full name" id="username" placeholder="Name">
+        <label class="join__form-label visually-hidden" for="email">
+          Email
+        </label>
+        <input class="join__form-input input input-reset" type="email" name="email" aria-required="true" required
+          autocomplete="email" title="Enter your email" id="email" placeholder="Email">
+        <button class="join__form-btn btn btn-reset btn-transparent" type="submit" form="join-form">Subscribe</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+      <section class="location container-wide">
+  <img class="location__img" src="img/map.jpg" alt="Branches of the map" width="960" height="600" loading="lazy">
+  <div class="location__content">
+    <h2 class="location__title title backdrop-title backdrop-title--centered" data-title="look">Find us near you</h2>
+    <div class="location__text text">
+      <p>Nec suas signiferumque id. An eum labore commodo principes. Usu diam noluisse cu, nam
+        adipisci</p>
+    </div>
+    <a class="location__btn btn btn-reset btn-transparent" href="#">View more</a>
+  </div>
+</section>
+
+      <section class="family">
+  <div class="family__content container">
+    <h2 class="family__title title title--big backdrop-title backdrop-title--centered" data-title="part">be a part of
+      our fit family</h2>
+    <div class="family__text section-descr">
+      <p>Training helps you think and feel better. join us!</p>
+    </div>
+  </div>
+  <div class="family__imgs container-wide">
+    <img class="family__img" src="img/family/family-img-1.jpg" alt="Training people" width="414" height="479"
+      loading="lazy">
+    <img class="family__img" src="img/family/family-img-2.jpg" alt="Training people" width="744" height="479"
+      loading="lazy">
+    <img class="family__img" src="img/family/family-img-3.jpg" alt="Training people" width="396" height="479"
+      loading="lazy">
+    <img class="family__img" src="img/family/family-img-4.jpg" alt="Training people" width="396" height="479"
+      loading="lazy">
+    <img class="family__img" src="img/family/family-img-5.jpg" alt="Training people" width="414" height="479"
+      loading="lazy">
+  </div>
+</section>
+
+      <section class="calculate">
+  <div class="calculate__inner container">
+    <div class="calculate__content">
+      <h2 class="calculate__title title backdrop-title" data-title="BMI">
+        Input your <abbr title="Body mass index">BMI</abbr>
+      </h2>
+      <div class="calculate__text text">
+        <p>Duo graece ponderum ne, ei mel aliquando. Pro te tamquam nonumes, nam no nemore epicurei</p>
+      </div>
+      <form class="calculate__form" action="#" id="calculate-form" method="POST">
+        <div class="calculate__form-wrapper">
+          <label class="calculate__form-label visually-hidden" for="calculate-height">
+            Height / cm
+          </label>
+          <input class="calculate__form-input input input-reset" type="number" name="Height / cm" aria-required="true"
+            required autocomplete="off" title="Please enter your Height / cm" id="calculate-height"
+            placeholder="Height / cm">
+          <label class="calculate__form-label visually-hidden" for="calculate-weight">
+            Weight / kg
+          </label>
+          <input class="calculate__form-input input input-reset" type="number" name="Weight / kg" aria-required="true"
+            required autocomplete="off" title="Please enter your Weight / kg" id="calculate-weight"
+            placeholder="Weight / kg">
+          <label class="calculate__form-label visually-hidden" for="calculate-age">
+            Age
+          </label>
+          <input class="calculate__form-input input input-reset" type="number" name="Age" aria-required="true" required
+            autocomplete="off" title="Please enter your age" id="calculate-age" placeholder="Age">
+          <label class="calculate__form-label visually-hidden" for="calculate-gender">Gender</label>
+          <select class="calculate__form-input input" name="gender" id="calculate-gender" required aria-required="true"
+            form="calculate-form" title="Please choose your gender">
+            <option value="" disabled selected>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <label class="calculate__form-label visually-hidden" for="calculate-factor">activity factor</label>
+          <select class="calculate__form-input input input--big" name="activity factor" id="calculate-factor" required
+            aria-required="true" form="calculate-form" title="Please choose your activity factor">
+            <option value="" disabled selected>Select an activity factor:</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <button class="calculate__form-btn btn btn-reset btn-transparent" type="submit"
+          form="calculate-form">Calculate</button>
+      </form>
+    </div>
+    <div class="calculate-table-wrapper">
+      <table class="calculate-table">
+        <thead>
+          <tr>
+            <th><abbr title="Body mass index">BMI</abbr></th>
+            <th>Weight status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Below 18.5</td>
+            <td>Underweight</td>
+          </tr>
+          <tr>
+            <td>18.5 — 24.9</td>
+            <td>Healthy</td>
+          </tr>
+          <tr>
+            <td>25.0 — 29.9</td>
+            <td>Overweight</td>
+          </tr>
+          <tr>
+            <td>30.0 — and Above</td>
+            <td>Obese</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2"> <b>BMR</b> Metabolic Rate / <b>BMI</b> Body Mass Index</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="footer-main">
+    <div class="footer-main__inner container">
+      <div class="footer-main__info">
+        <a class="footer-main__logo" href="#">
+          <img class="footer-main__logo-image" src="img/logo.svg" alt="Kropp logo" width="270" height="50"
+            loading="lazy">
+        </a>
+        <div class="footer-main__text section-descr">
+          <p>please feel free to send us an e-mail at
+            <a href="mailto:kropp@qodeinteractive.com">kropp@qodeinteractive.com</a> For any additional
+            inquiries</p>
+        </div>
+      </div>
+      <div class="footer-main__content">
+        <div class="footer-main__column">
+          <h2 class="footer-main__column-title">About</h2>
+          <div class="footer-main__column-text">
+            <p>Shape up your site with Kropp, a theme especially made for fitness & gym websites.</p>
+          </div>
+        </div>
+        <div class="footer-main__column">
+          <h2 class="footer-main__column-title">Working hours</h2>
+          <div class="footer-main__column-schedule">
+            Monday — Friday <br>
+            <time datetime="05:30/24:00">05:30 — 24:00</time>
+          </div>
+          <div class="footer-main__column-schedule">
+            Weekdays <br>
+            <time datetime="00:00/24:00">00:00 — 24:00</time>
+          </div>
+        </div>
+        <div class="footer-main__column">
+          <h2 class="footer-main__column-title">Location</h2>
+          <address class="footer-main__column-address">
+            68 Jay Street, Brooklyn, <br>
+            NY 11201, United States
+          </address>
+          <div class="footer-main__column-contacts">
+            <ul class="footer-main__column-list list-reset">
+              <li class="footer-main__column-item">
+                <a class="footer-main__column-link"
+                  href="mailto:kropp@qodeinteractive.com">kropp@qodeinteractive.com</a>
+              </li>
+              <li class="footer-main__column-item">
+                <a class="footer-main__column-link" href="tel:+17184076400">+ (1) 718 — 407 — 6400</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-main__column">
+          <h2 class="footer-main__column-title has-arrow">start now</h2>
+          <form class="footer-main__column-form" method="POST" action="#">
+            <label class="footer-main__column-label visually-hidden" for="footer-subscribe">Email</label>
+            <input class="footer-main__column-input input" type="email" id="footer-subscribe" name="email"
+              aria-required="true" required autocomplete="email" title="Enter your email" placeholder="Email">
+            <button class="footer-main__column-btn btn-reset" type="submit" aria-label="Subscribe"
+              title="Click to Subscribe"></button>
+          </form>
+          <div class="footer-main__column-soc1als soc1als">
+            <ul class="soc1als__list list-reset">
+              <li class="soc1als__item">
+                <a class="soc1als__link soc1als__link--tiktok" href="#" target="_blank" aria-label="TikTok">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#tiktok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc1als__item">
+                <a class="soc1als__link soc1als__link--youtube" href="#" target="_blank" aria-label="Youtube">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc1als__item">
+                <a class="soc1als__link soc1als__link--instagram" href="#" target="_blank" aria-label="Instagram">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc1als__item">
+                <a class="soc1als__link soc1als__link--facebook" href="#" target="_blank" aria-label="facebook">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc1als__item">
+                <a class="soc1als__link soc1als__link--twitter" href="#" target="_blank" aria-label="twitter">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-extra">
+    <div class="footer-extra__inner container">
+      <small class="footer-extra__copyright">©<time datetime="2024">2024</time> Qode Interactive, All Rights Reserved |
+        <a href="#">Privacy Policy </a> | <a href="#">Contact Us</a></small>
+    </div>
+  </div>
+</footer>
+<div class="overlay" data-menu-overlay></div>
+
+  </div>
+</body>
+
+</html>
