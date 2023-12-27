@@ -48,40 +48,4 @@
     font-weight: 700;
     line-height: 1;
   }
-
-  &-pagination__list {
-    display: flex;
-    justify-content: center;
-    column-gap: 5px;
-  }
-
-  &-pagination__item {
-    display: flex;
-  }
-
-  &-pagination__btn {
-    display: inline-flex;
-    justify-content: center;
-    background-color: transparent;
-    padding: 10px;
-
-    &::after {
-      content: "";
-      width: 10px;
-      aspect-ratio: 1;
-      border: var(--border);
-      border-radius: 50%;
-      transition: border-color var(--transition-duration) ease;
-    }
-
-    &.is-current {
-      &::after {
-        background-color: var(--color-light);
-      }
-    }
-
-    &:not(.is-current):hover::after {
-      border-color: var(--color-light-gray);
-    }
-  }
 }

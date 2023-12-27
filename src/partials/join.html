@@ -1,7 +1,13 @@
-<section class="join">
-  <div class="join__wrapper">
-    <video class="join__video" src="" width="960" height="600" poster="img/join/join-poster.jpg"></video>
-    <button class="join__btn btn-reset" type="button" title="Play video" aria-label="Play video">Play</button>
+<section class="join" id="join">
+  <div class="join__wrapper js-video-block">
+    <video class="join__video js-video" width="960" height="600" poster="img/join/join-poster.jpg" muted playsinline
+      preload="auto" aria-describedby="video-description-join">
+      <source src="join-video.webm" type="video/webm">
+      <source src="join-video.mp4" type="video/mp4">
+    </video>
+    <button class="join__btn btn-reset js-video-btn" type="button" title="Play video"
+      aria-label="Play video">Play</button>
+    <p class="visually-hidden" id="video-description-join">girl stretching</p>
   </div>
   <div class="join__content container">
     <h2 class="join__title">Join us</h2>

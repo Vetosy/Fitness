@@ -22,7 +22,9 @@
 
   &__btn {
     position: absolute;
-    inset: 1;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
     width: 200px;
     aspect-ratio: 1;
     display: inline-flex;
@@ -45,6 +47,11 @@
       aspect-ratio: 1;
       background: url(../img/arrow-top-right.svg) center/contain no-repeat;
       transition: filter var(--transition-duration) ease;
+    }
+
+    &.has-played {
+      opacity: 0;
+      visibility: hidden;
     }
 
     @include hover {
