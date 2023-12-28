@@ -24,6 +24,11 @@
 
   &-logo {
     flex-shrink: 0;
+
+    &:focus {
+      outline: 2px solid var(--color-light);
+      outline-offset: 6px;
+    }
   }
 
   &__burger {

@@ -1,0 +1,90 @@
+.choices {
+  width: 100%;
+
+  &[data-type*="select-one"] {
+    &::after {
+      border: none;
+      width: 30px;
+      height: 30px;
+      margin-top: 0;
+      transform: translateY(-50%);
+      background: url(../img/angle-down.svg) center/cover no-repeat;
+      transition: transform var(--transition-duration) ease-in-out;
+    }
+
+    &.is-open {
+      &::after {
+        margin-top: 0;
+        transform: rotate(180deg) translateY(-50%);
+      }
+    }
+
+    .choices__inner {
+      padding-bottom: 0;
+    }
+  }
+
+  &.is-open {
+    & .choices__inner {
+      border-radius: var(--border-radius);
+    }
+  }
+
+  &.is-focused {
+    outline: 2px solid var(--color-light);
+    outline-offset: 4px;
+    border-radius: var(--border-radius);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    margin: 0;
+    height: var(--input-height);
+    background-color: transparent;
+    border: 1px solid var(--color-light-gray);
+    border-radius: var(--border-radius);
+    color: var(--color-light-gray);
+    font-size: 16px;
+  }
+
+  &__list {
+    font-size: 16px;
+
+    &--single {
+      padding: 0;
+    }
+  }
+
+  &__placeholder {
+    opacity: 1;
+  }
+
+  .choices__list--dropdown .choices__item--selectable::after {
+    display: none;
+  }
+
+  .choices__list--dropdown,
+  .choices__list[aria-expanded] {
+    border: 1px solid var(--color-light-gray);
+    border-radius: var(--border-radius);
+    color: var(--color-light-gray);
+    padding: 10px 15px;
+    background-color: var(--color-dark-alternate);
+  }
+
+  .choices__list--dropdown .choices__item,
+  .choices__list[aria-expanded] .choices__item {
+    font-size: 16px;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+  }
+
+  .choices__list--dropdown .choices__item--selectable.is-highlighted,
+  .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+    background-color: var(--color-light-gray);
+    color: var(--color-dark);
+  }
+}

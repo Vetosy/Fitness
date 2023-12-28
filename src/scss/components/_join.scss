@@ -54,6 +54,11 @@
       visibility: hidden;
     }
 
+    &:focus {
+      outline: 2px solid var(--color-light);
+      outline-offset: 4px;
+    }
+
     @include hover {
       color: var(--color-dark);
       border: 1px solid var(--color-dark);

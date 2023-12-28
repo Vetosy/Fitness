@@ -3,13 +3,17 @@
   flex-direction: column;
   justify-content: end;
   min-height: calc(100vh - var(--header-height));
-  padding: 36px 70px;
+  padding: 70px;
   color: var(--color-light);
   background-color: var(--color-dark-alternate);
 
   @include tablet {
-    padding-inline: 15px;
+    padding: 35px;
     row-gap: 10px;
+  }
+
+  @include small-tablet {
+    padding: 35px 15px;
   }
 
   &-body {
@@ -47,5 +51,10 @@
     font-size: min(18.75vw, 360px);
     font-weight: 700;
     line-height: 1;
+    padding-bottom: 30px;
+
+    @include small-tablet {
+      padding-bottom: 45px;
+    }
   }
 }

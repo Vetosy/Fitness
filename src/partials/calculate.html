@@ -27,15 +27,16 @@
           <input class="calculate__form-input input input-reset" type="number" name="Age" aria-required="true" required
             autocomplete="off" title="Please enter your age" id="calculate-age" placeholder="Age">
           <label class="calculate__form-label visually-hidden" for="calculate-gender">Gender</label>
-          <select class="calculate__form-input input" name="gender" id="calculate-gender" required aria-required="true"
-            form="calculate-form" title="Please choose your gender">
+          <select class="calculate__form-select js-select" name="gender" id="calculate-gender" required
+            aria-required="true" form="calculate-form" title="Please choose your gender">
             <option value="" disabled selected>Gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
           <label class="calculate__form-label visually-hidden" for="calculate-factor">activity factor</label>
-          <select class="calculate__form-input input input--big" name="activity factor" id="calculate-factor" required
-            aria-required="true" form="calculate-form" title="Please choose your activity factor">
+          <select class="calculate__form-select calculate__form-select--big js-select" name="activity factor"
+            id="calculate-factor" required aria-required="true" form="calculate-form"
+            title="Please choose your activity factor">
             <option value="" disabled selected>Select an activity factor:</option>
             <option value="1">1</option>
             <option value="2">2</option>

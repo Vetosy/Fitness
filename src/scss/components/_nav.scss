@@ -28,6 +28,11 @@
     color: var(--color-light);
     transition: color var(--transition-duration) ease;
 
+    &:focus {
+      outline: 2px solid var(--color-light);
+      outline-offset: 6px;
+    }
+
     @include hover {
       color: var(--color-light-gray);
     }

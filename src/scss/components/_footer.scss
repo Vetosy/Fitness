@@ -14,6 +14,13 @@
     }
   }
 
+  &-main__logo {
+    &:focus {
+      outline: 2px solid var(--color-light);
+      outline-offset: 4px;
+    }
+  }
+
   &-main__info,
   &-main__content {
     display: grid;
@@ -44,6 +51,16 @@
     a {
       color: currentColor;
       text-decoration: underline;
+      transition: color var(--transition-duration) ease;
+
+      @include hover {
+        color: var(--color-light-gray);
+      }
+
+      &:focus {
+        outline: 2px solid var(--color-light);
+        outline-offset: 2px;
+      }
     }
   }
 
@@ -120,6 +137,16 @@
 
   &-main__column-link {
     color: currentColor;
+    transition: color var(--transition-duration) ease;
+
+    @include hover {
+      color: var(--color-light-gray);
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-light);
+      outline-offset: 2px;
+    }
   }
 
   &-main__column-form {
@@ -150,6 +177,11 @@
     border: var(--border);
     transition: background-color var(--transition-duration) ease;
 
+    &:focus {
+      outline: 2px solid var(--color-light);
+      outline-offset: 2px;
+    }
+
     @include hover {
       background-color: var(--color-light-gray);
     }
@@ -165,6 +197,11 @@
     &__link {
       display: flex;
       width: 23px;
+
+      &:focus {
+        outline: 2px solid var(--color-light);
+        outline-offset: 2px;
+      }
 
       svg {
         width: 22px;
@@ -229,6 +266,16 @@
     a {
       color: currentColor;
       text-decoration: underline;
+      transition: color var(--transition-duration) ease;
+
+      &:focus {
+        outline: 2px solid var(--color-light);
+        outline-offset: 2px;
+      }
+
+      @include hover {
+        color: var(--color-light-gray);
+      }
     }
   }
 }
