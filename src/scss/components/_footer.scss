@@ -78,8 +78,9 @@
   }
 
   &-main__column-title {
+    @include fluid-text(16, 22);
+
     color: var(--color-light);
-    font-size: clamp(16px, 1.15vw, 22px);
     font-weight: 700;
     line-height: 1.72;
     text-transform: uppercase;

@@ -16,9 +16,9 @@
   }
 
   &__link {
+    position: relative;
     display: inline-flex;
     align-items: center;
-    column-gap: 7px;
     height: var(--header-height);
     font-size: 12px;
     font-weight: 700;
@@ -35,6 +35,16 @@
 
     @include hover {
       color: var(--color-light-gray);
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: calc(100% + 8px);
+        width: 8px;
+        aspect-ratio: 1;
+        background-color: var(--color-light-gray);
+        border-radius: var(--border-radius);
+      }
     }
 
     @include tablet {
@@ -43,16 +53,6 @@
 
     @include mobile {
       height: 32px;
-    }
-
-    &.is-current {
-      &::after {
-        content: "";
-        width: 5px;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        background-color: currentColor;
-      }
     }
   }
 }

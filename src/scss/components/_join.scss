@@ -2,12 +2,13 @@
   background-color: var(--color-dark-alternate);
 
   &__wrapper {
+    @include image-set("../img/join/join-bg", center, cover, no-repeat);
+
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 140px 30px;
-    background: url(../img/join/join-bg.jpg) center/cover no-repeat var(--color-dark-alternate);
 
     @include mobile {
       padding: 70px 30px;
@@ -82,10 +83,11 @@
   }
 
   &__title {
+    @include fluid-text(64, 180);
+
     position: relative;
     margin-top: -0.4em;
     color: var(--color-light);
-    font-size: clamp(64px, 9.37vw, 180px);
     font-weight: 700;
     line-height: 1;
     text-align: center;

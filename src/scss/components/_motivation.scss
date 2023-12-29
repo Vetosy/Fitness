@@ -52,6 +52,8 @@
   }
 
   &__card-text {
+    @include line-clamp(3);
+
     max-width: 387px;
 
     &:not(:last-child) {

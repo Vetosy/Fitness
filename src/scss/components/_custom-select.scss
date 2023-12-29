@@ -15,7 +15,7 @@
     &.is-open {
       &::after {
         margin-top: 0;
-        transform: rotate(180deg) translateY(-50%);
+        transform: rotate(180deg) translateY(50%);
       }
     }
 

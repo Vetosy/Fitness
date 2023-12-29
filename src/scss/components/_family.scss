@@ -16,24 +16,11 @@
     }
   }
 
-  &__imgs {
-    display: flex;
-    justify-content: center;
-    column-gap: 26px;
-    scroll-snap-type: x mandatory;
+  &__swiper {
+    cursor: none;
 
-    @include small-tablet {
-      column-gap: 13px;
-    }
-  }
-
-  &__img {
-    @include tablet {
-      height: 360px;
-    }
-
-    @include small-tablet {
-      height: 180px;
+    & .swiper-slide {
+      width: auto;
     }
   }
 }
