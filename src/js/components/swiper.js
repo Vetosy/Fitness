@@ -12,17 +12,17 @@ Swiper.use([Pagination, A11y, Keyboard, Autoplay, Parallax]);
 
 const bodyStyle = window.getComputedStyle(document.body);
 const gap = parseInt(bodyStyle.getPropertyValue('--family-swiper-gap'));
-const progressCircle = document.querySelector(".js-autoplay-progress-svg");
+const progressCircle = document.querySelector(".js-autoplay-progress-icon");
 const progressContent = document.querySelector(".js-autoplay-progress-content");
 
-const bannerSwiper = new Swiper('.banner-swiper', {
+const bannerSwiper = new Swiper('.banner__swiper', {
   slidesPerView: 'auto',
   slidesPerGroup: 1,
   loop: true,
   speed: 1500,
   parallax: true,
   pagination: {
-    el: '.banner-pagination',
+    el: '.banner__swiper-pagination',
     type: 'bullets',
     dynamicBullets: true,
     clickable: true,

@@ -16,11 +16,7 @@
     }
   }
 
-  &__swiper {
-    cursor: none;
-
-    & .swiper-slide {
-      width: auto;
-    }
+  &__swiper-slide {
+    width: auto;
   }
 }

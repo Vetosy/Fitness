@@ -16,11 +16,16 @@
     padding: 35px 15px;
   }
 
-  &-body {
+  &__swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__swiper-content {
     text-transform: uppercase;
   }
 
-  &-info {
+  &__swiper-info {
     @include fluid-text(16, 30);
 
     display: flex;
@@ -47,7 +52,7 @@
     }
   }
 
-  &-title {
+  &__swiper-title {
     color: currentColor;
     font-size: min(18.75vw, 360px);
     font-weight: 700;
@@ -56,6 +61,51 @@
 
     @include small-tablet {
       padding-bottom: 45px;
+    }
+  }
+
+  &__swiper-progress {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 60px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--color-light);
+
+    @include tablet {
+      width: 40px;
+    }
+
+    @include mobile {
+      width: 30px;
+    }
+  }
+
+  &__swiper-progress-icon {
+    --progress: 0;
+    --stroke-dasharray: 125.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    aspect-ratio: 1;
+    stroke-width: 3px;
+    stroke: var(--color-light);
+    fill: none;
+    stroke-dashoffset: calc(var(--stroke-dasharray) * (1 - var(--progress)));
+    stroke-dasharray: var(--stroke-dasharray);
+    transform: rotate(-90deg);
+  }
+
+  &__swiper-progress-content {
+    @include small-tablet {
+      font-size: 12px;
     }
   }
 }

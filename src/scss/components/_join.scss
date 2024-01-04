@@ -55,6 +55,10 @@
       visibility: hidden;
     }
 
+    @include small-tablet {
+      width: 140px;
+    }
+
     &:focus {
       outline: 2px solid var(--color-light);
       outline-offset: 4px;
@@ -67,10 +71,6 @@
       &::after {
         filter: invert(1);
       }
-    }
-
-    @include small-tablet {
-      width: 140px;
     }
   }
 

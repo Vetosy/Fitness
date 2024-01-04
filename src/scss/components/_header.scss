@@ -15,6 +15,7 @@
     align-items: center;
     justify-content: space-between;
     column-gap: 20px;
+    padding-top: 8px;
 
     @include tablet {
       flex-wrap: wrap;
@@ -22,12 +23,86 @@
     }
   }
 
-  &-logo {
+  &__logo {
     flex-shrink: 0;
 
     &:focus {
       outline: 2px solid var(--color-light);
       outline-offset: 6px;
+    }
+  }
+
+  &__nav {
+    @include tablet {
+      order: 1;
+      flex-basis: 100%;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 50px;
+
+    @include mobile {
+      column-gap: 25px;
+    }
+  }
+
+  &__nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: var(--header-height);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--color-light);
+    transition: color var(--transition-duration) ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: calc(100% + 8px);
+      width: 8px;
+      aspect-ratio: 1;
+      background-color: var(--color-light-gray);
+      border-radius: var(--border-radius);
+      opacity: 0;
+      transition: opacity var(--transition-duration) ease;
+    }
+
+    @include tablet {
+      height: 50px;
+    }
+
+    @include mobile {
+      height: 32px;
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-light);
+      outline-offset: 4px;
+    }
+
+    @include hover {
+      color: var(--color-light-gray);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__user-nav {
+    display: flex;
+    column-gap: 40px;
+
+    @include mobile {
+      column-gap: 15px;
     }
   }
 
@@ -56,14 +131,5 @@
     height: 2px;
     background-color: currentColor;
     box-shadow: 16px 0 0 currentColor;
-  }
-
-  &__user-nav {
-    display: flex;
-    column-gap: 40px;
-
-    @include mobile {
-      column-gap: 15px;
-    }
   }
 }

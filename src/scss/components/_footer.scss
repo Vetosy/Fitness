@@ -2,7 +2,7 @@
   background-color: var(--color-dark);
   --footer-logo-width: 20.77%;
 
-  &-main {
+  &__container {
     padding-block: 150px;
 
     @include tablet {
@@ -14,20 +14,14 @@
     }
   }
 
-  &-main__logo {
-    &:focus {
-      outline: 2px solid var(--color-light);
-      outline-offset: 4px;
-    }
-  }
-
-  &-main__info,
-  &-main__content {
+  &__info,
+  &__content-list {
     display: grid;
     column-gap: 62px;
+    align-items: center;
   }
 
-  &-main__info {
+  &__info {
     grid-template-columns: var(--footer-logo-width) auto;
 
     &:not(:last-child) {
@@ -45,99 +39,20 @@
     }
   }
 
-  &-main__text {
+  &__info-logo {
+    &:focus {
+      outline: 2px solid var(--color-light);
+      outline-offset: 4px;
+    }
+  }
+
+  &__info-text {
     text-align: left;
-
-    a {
-      color: currentColor;
-      text-decoration: underline;
-      transition: color var(--transition-duration) ease;
-
-      @include hover {
-        color: var(--color-light-gray);
-      }
-
-      &:focus {
-        outline: 2px solid var(--color-light);
-        outline-offset: 2px;
-      }
-    }
   }
 
-  &-main__content {
-    grid-template-columns: var(--footer-logo-width) repeat(3, 1fr);
-
-    @include tablet {
-      grid-template-columns: repeat(2, 1fr);
-      row-gap: 30px;
-    }
-
-    @include small-tablet {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  &-main__column-title {
-    @include fluid-text(16, 22);
-
-    color: var(--color-light);
-    font-weight: 700;
-    line-height: 1.72;
-    text-transform: uppercase;
-
-    &:not(:last-child) {
-      margin-bottom: 15px;
-    }
-
-    &.has-arrow {
-      &::after {
-        content: "";
-        display: inline-block;
-        height: 0.74em;
-        aspect-ratio: 1;
-        background: url(../img/bold-arrow-down.svg) center/contain no-repeat;
-        scale: -1 1;
-        margin-left: 0.5em;
-      }
-    }
-  }
-
-  &-main__column-text {
-    max-width: 235px;
-    color: var(--color-light);
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.75;
-    letter-spacing: 0.8px;
-  }
-
-  &-main__column-schedule {
-    color: var(--color-light);
-
-    &:not(:last-child) {
-      margin-bottom: 13px;
-    }
-  }
-
-  &-main__column-address {
-    color: var(--color-light);
-    font-style: normal;
-
-    &:not(:last-child) {
-      margin-bottom: 35px;
-    }
-  }
-
-  &-main__column-item {
-    color: var(--color-light);
-
-    &:not(:last-child) {
-      margin-bottom: 5px;
-    }
-  }
-
-  &-main__column-link {
+  &__info-link {
     color: currentColor;
+    text-decoration: underline;
     transition: color var(--transition-duration) ease;
 
     @include hover {
@@ -150,7 +65,94 @@
     }
   }
 
-  &-main__column-form {
+  &__content-list {
+    grid-template-columns: var(--footer-logo-width) repeat(3, 1fr);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 30px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__content-title {
+    @include fluid-text(16, 22);
+
+    color: var(--color-light);
+    font-weight: 700;
+    line-height: 1.72;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &--has-arrow {
+      &::after {
+        content: "";
+        display: inline-block;
+        height: 0.74em;
+        aspect-ratio: 1;
+        background: url(../img/bold-arrow-down.svg) center/contain no-repeat;
+        scale: -1 1;
+        margin-left: 0.5em;
+      }
+    }
+  }
+
+  &__content-text {
+    max-width: 235px;
+    color: var(--color-light);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75;
+    letter-spacing: 0.8px;
+  }
+
+  &__content-schedule {
+    color: var(--color-light);
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__content-address {
+    color: var(--color-light);
+    font-style: normal;
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__content-subitem {
+    color: var(--color-light);
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__content-sublink {
+    color: currentColor;
+    transition: color var(--transition-duration) ease;
+    text-decoration: underline;
+
+    @include hover {
+      color: var(--color-light-gray);
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-light);
+      outline-offset: 2px;
+    }
+  }
+
+  &__content-form {
     position: relative;
 
     &:not(:last-child) {
@@ -162,11 +164,11 @@
     }
   }
 
-  &-main__column-input {
+  &__content-input {
     padding-right: 70px;
   }
 
-  &-main__column-btn {
+  &__content-btn {
     position: absolute;
     top: 0;
     right: 0;
@@ -188,95 +190,87 @@
     }
   }
 
-  .soc1als {
-    &__list {
-      display: flex;
-      align-items: center;
-      column-gap: 18px;
+  &__content-soc1als {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 18px;
+  }
+
+  &__content-soc1als-link {
+    display: flex;
+    width: 45px;
+
+    &:focus {
+      outline: 2px solid var(--color-light);
+      outline-offset: 2px;
+    }
+  }
+
+  &__content-soc1als-icon {
+    --tiktok-fill-color: #00e9e3;
+    --tiktok-stroke-color: #f7004d;
+    --youtube-fill-color: #f00000;
+    --instagram-fill-color: #c62f94;
+    --facebook-fill-color: #2f69ac;
+    --twitter-fill-color: #1c96e8;
+
+    width: 45px;
+    aspect-ratio: 1;
+    fill: var(--color-light);
+    transition: fill var(--transition-duration) ease, stroke var(--transition-duration) ease;
+
+    &--tiktok {
+      @include hover {
+        stroke: var(--tiktok-stroke-color);
+        fill: var(--tiktok-fill-color);
+      }
     }
 
-    &__link {
-      display: flex;
-      width: 23px;
-
-      &:focus {
-        outline: 2px solid var(--color-light);
-        outline-offset: 2px;
+    &--youtube {
+      @include hover {
+        fill: var(--youtube-fill-color);
       }
+    }
 
-      svg {
-        width: 22px;
-        aspect-ratio: 1;
-        fill: var(--color-light);
-        transition: fill var(--transition-duration) ease, stroke var(--transition-duration) ease;
+    &--instagram {
+      @include hover {
+        fill: var(--instagram-fill-color);
       }
+    }
 
-      &--tiktok {
-        svg {
-          @include hover {
-            stroke: #f7004d;
-            fill: #00e9e3;
-          }
-        }
+    &--facebook {
+      @include hover {
+        fill: var(--facebook-fill-color);
       }
+    }
 
-      &--youtube {
-        svg {
-          @include hover {
-            fill: #f00000;
-          }
-        }
-      }
-
-      &--instagram {
-        svg {
-          @include hover {
-            fill: #c62f94;
-          }
-        }
-      }
-
-      &--facebook {
-        svg {
-          @include hover {
-            fill: #2f69ac;
-          }
-        }
-      }
-
-      &--twitter {
-        svg {
-          @include hover {
-            fill: #1c96e8;
-          }
-        }
+    &--twitter {
+      @include hover {
+        fill: var(--twitter-fill-color);
       }
     }
   }
 
-  &-extra {
+  &__content-copyright {
     font-size: 14px;
     padding-block: 15px;
     background-color: var(--color-dark-alternate);
     color: var(--color-light);
   }
 
-  &-extra__copyright {
-    font-size: 100%;
+  &__content-copyright-link {
+    color: currentColor;
+    text-decoration: underline;
+    transition: color var(--transition-duration) ease;
 
-    a {
-      color: currentColor;
-      text-decoration: underline;
-      transition: color var(--transition-duration) ease;
+    &:focus {
+      outline: 2px solid var(--color-light);
+      outline-offset: 2px;
+    }
 
-      &:focus {
-        outline: 2px solid var(--color-light);
-        outline-offset: 2px;
-      }
-
-      @include hover {
-        color: var(--color-light-gray);
-      }
+    @include hover {
+      color: var(--color-light-gray);
     }
   }
 }

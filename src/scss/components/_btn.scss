@@ -12,13 +12,13 @@
   border-radius: var(--border-radius);
   transition: background-color var(--transition-duration) ease;
 
-  &-modal {
+  &--modal {
     @include hover {
       background-color: var(--color-light-gray);
     }
   }
 
-  &-transparent {
+  &--transparent {
     position: relative;
     height: var(--input-height);
     padding-left: 31px;
@@ -49,11 +49,11 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 200%;
+        aspect-ratio: 1;
         opacity: 0.5;
-        filter: blur;
+        filter: blur(5px);
         background: var(--color-btn-gradient);
-        transform: translate(-100%, -25%) rotate(10deg);
+        translate: -100%, -25%;
         animation: shine 4s infinite;
       }
     }
