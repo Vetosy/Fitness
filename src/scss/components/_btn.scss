@@ -12,12 +12,6 @@
   border-radius: var(--border-radius);
   transition: background-color var(--transition-duration) ease;
 
-  &--modal {
-    @include hover {
-      background-color: var(--color-light-gray);
-    }
-  }
-
   &--transparent {
     position: relative;
     height: var(--input-height);
@@ -62,9 +56,5 @@
   &:focus {
     outline: 2px solid var(--color-light);
     outline-offset: 4px;
-  }
-
-  @include mobile {
-    padding-inline: 18px;
   }
 }

@@ -18,13 +18,20 @@
     padding-top: 8px;
 
     @include tablet {
-      flex-wrap: wrap;
-      row-gap: 10px;
+      padding-top: 0;
+    }
+
+    @include mobile {
+      column-gap: 10px;
     }
   }
 
   &__logo {
     flex-shrink: 0;
+
+    @include mobile {
+      max-width: 70px;
+    }
 
     &:focus {
       outline: 2px solid var(--color-light);
@@ -34,19 +41,44 @@
 
   &__nav {
     @include tablet {
-      order: 1;
-      flex-basis: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 70vw;
+      height: 100vh;
+      padding: 50px;
+      border-top-right-radius: var(--border-radius);
+      border-bottom-right-radius: var(--border-radius);
+      background-color: var(--color-light-gray);
+      translate: -200% 0;
+      transition: border-radius 1s var(--transition-burger-nav), translate 1s var(--transition-burger-nav);
+      overflow-y: auto;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include mobile {
+      padding: 25px;
+    }
+
+    &--active {
+      border-radius: 0;
+      translate: 0;
     }
   }
 
   &__nav-list {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     column-gap: 50px;
 
-    @include mobile {
-      column-gap: 25px;
+    @include tablet {
+      flex-direction: column;
+      justify-content: space-evenly;
+      column-gap: 0;
+      row-gap: 50px;
+      flex-grow: 1;
     }
   }
 
@@ -77,6 +109,8 @@
 
     @include tablet {
       height: 50px;
+      color: var(--color-dark-alternate);
+      font-size: 24px;
     }
 
     @include mobile {
@@ -106,30 +140,98 @@
     }
   }
 
-  &__burger {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 4px;
-    padding-left: 8px;
-    width: 40px;
-    aspect-ratio: 1;
-    background-color: transparent;
+  &__modal-wrapper {
+    background-color: var(--color-dark-alternate);
     border: var(--border);
-    border-radius: 50%;
-    color: var(--color-light);
-    transition: color var(--transition-duration) ease, border-color var(--transition-duration) ease;
+    border-radius: var(--border-radius);
 
-    @include hover {
-      color: var(--color-light-gray);
-      border-color: var(--color-light-gray);
+    &::backdrop {
+      background-color: rgba(0, 0, 0, 0.7);
+      cursor: pointer;
     }
   }
 
-  &__burger-line {
-    width: 6px;
-    height: 2px;
-    background-color: currentColor;
-    box-shadow: 16px 0 0 currentColor;
+  &__modal-content {
+    padding: 50px;
+  }
+
+  &__modal-close {
+  }
+
+  &__burger-wrapper {
+    border-radius: var(--border-radius);
+    border: var(--border);
+    padding-inline: 10px;
+    display: none;
+    z-index: 11;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__burger {
+    --burger-width: 18px;
+    --burger-height: 18px;
+    --burger-line-height: 2px;
+
+    position: relative;
+    padding: 0;
+    width: var(--burger-width);
+    height: var(--burger-height);
+    color: var(--color-light);
+    background-color: transparent;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: var(--burger-line-height);
+      background-color: currentColor;
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      top: calc(100% - var(--burger-line-height));
+    }
+
+    &-line {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: var(--burger-line-height);
+      background-color: currentColor;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &--active {
+      &::before {
+        top: 50%;
+        transform: rotate(45deg);
+        transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+      }
+
+      &::after {
+        top: 50%;
+        transform: rotate(-45deg);
+        transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+      }
+
+      .header__burger-line {
+        transform: scale(0);
+        transition: transform 0.3s ease-in-out;
+      }
+    }
   }
 }

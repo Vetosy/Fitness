@@ -3,7 +3,7 @@
     <a class="header__logo" href="#">
       <img class="header__icon" src="img/logo.svg" alt="Kropp logo" width="135" height="25" loading="lazy">
     </a>
-    <nav class="header__nav" aria-label="Main navigation">
+    <nav class="header__nav" aria-label="Main navigation" data-menu>
       <ul class="header__nav-list">
         <li class="header__nav-item">
           <a href="#" class="header__nav-link" data-scroll data-menu-item>Home</a>
@@ -23,12 +23,41 @@
       </ul>
     </nav>
     <div class="header__user-nav">
-      <button class="header__btn btn btn--modal" type="button" title="Open modal menu">Sale</button>
-      <button class="header__burger" type="button" aria-label="Open menu" title="Open menu">
-        <span class="header__burger-line"></span>
-        <span class="header__burger-line"></span>
-        <span class="header__burger-line"></span>
-      </button>
+      <button class="header__modal-btn btn js-open-modal" type="button" title="Open modal menu">Start class</button>
+      <dialog class="header__modal-wrapper js-modal">
+        <div class="header__modal-content">
+          <button class="header__modal-close btn js-close-modal" type="button">Close</button>
+          <div class="header__modal-text">
+            <p>Leave a request for a consultation right now and if you make a decision within 24 hours, you will receive
+              a <mark class="header__modal-sale">20% discount</mark> on any tariff</p>
+          </div>
+          <h2 class="header__modal-title">We have until the end of the promotion:</h2>
+          <ul class="header__modal-timer">
+            <li class="header__modal-item header__modal-item--day">
+              <span class="header__modal-value"></span>
+              <span class="header__modal-time"></span>
+            </li>
+            <li class="header__modal-item header__modal-item--hrs">
+              <span class="header__modal-value"></span>
+              <span class="header__modal-time"></span>
+            </li>
+            <li class="header__modal-item header__modal-item--mins">
+              <span class="header__modal-value"></span>
+              <span class="header__modal-time"></span>
+            </li>
+          </ul>
+          <form class="header__modal-form" action="#" method="dialog">
+            <input class="header__form-input input" type="text">
+            <input class="header__form-input input" type="text">
+            <button class="header__form-btn btn btn--transparent" type="submit">Send</button>
+          </form>
+        </div>
+      </dialog>
+      <div class="header__burger-wrapper">
+        <button class="header__burger" type="button" aria-label="Open menu" aria-expanded="false" data-burger>
+          <span class="header__burger-line"></span>
+        </button>
+      </div>
     </div>
   </div>
 </header>

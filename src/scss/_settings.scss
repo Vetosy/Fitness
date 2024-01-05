@@ -154,3 +154,23 @@
   line-height: 1.75;
   letter-spacing: 0.8px;
 }
+
+@media (prefers-reduced-motion) {
+  * {
+    &,
+    &::after,
+    &::before {
+      animation: none !important;
+      transition: 0.01s !important;
+    }
+  }
+}
+
+@media (prefers-contrast: more) {
+  .backdrop-title {
+    &::after {
+      -webkit-text-stroke: 10px var(--color-dark-gray);
+      text-stroke: 10px var(--color-dark-gray);
+    }
+  }
+}

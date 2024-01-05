@@ -10,6 +10,8 @@
   @include tablet {
     padding: 35px;
     row-gap: 10px;
+    display: block;
+    min-height: auto;
   }
 
   @include small-tablet {
