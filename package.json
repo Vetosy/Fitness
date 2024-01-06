@@ -10,6 +10,7 @@
     "backend": "gulp backend",
     "zip": "gulp zip",
     "deploy": "gh-pages -d app"
+
   },
   "author": "Vetosy",
   "license": "ISC",

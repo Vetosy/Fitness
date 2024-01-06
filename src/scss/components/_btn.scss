@@ -26,6 +26,7 @@
     &::after {
       content: "";
       position: absolute;
+      top: 0;
       right: 0;
       height: 100%;
       aspect-ratio: 1;
@@ -51,6 +52,19 @@
         animation: shine 4s infinite;
       }
     }
+  }
+
+  &--modal {
+    @include hover {
+      background-color: var(--color-modal);
+    }
+  }
+
+  &--centered {
+    max-width: 100%;
+    width: 100%;
+    height: var(--input-height);
+    justify-content: center;
   }
 
   &:focus {

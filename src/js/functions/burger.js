@@ -1,3 +1,10 @@
+import {
+  disableScroll
+} from '../functions/disable-scroll';
+import {
+  enableScroll
+} from '../functions/enable-scroll';
+
 (function () {
   const burger = document.querySelector('[data-burger]');
   const menu = document.querySelector('[data-menu]');
@@ -12,11 +19,11 @@
     if (menu.classList.contains('header__nav--active')) {
       burger.setAttribute('aria-expanded', 'true');
       burger.setAttribute('aria-label', 'Close menu');
-      scrollController.disableScroll();
+      disableScroll();
     } else {
       burger.setAttribute('aria-expanded', 'false');
       burger.setAttribute('aria-label', 'Open menu');
-      scrollController.enableScroll();
+      enableScroll();
     }
   });
 
@@ -36,21 +43,6 @@
     burger.classList.remove('header__burger--active');
     menu.classList.remove('header__nav--active');
     overlay.classList.remove('overlay--active');
-    scrollController.enableScroll();
-  };
-
-  const scrollController = {
-    disableScroll() {
-      const paddingOffset = document.documentElement.clientWidth - document.body.offsetWidth;
-      document.body.style.cssText = `
-        overflow: hidden;
-        padding-right: ${paddingOffset}px;
-      `;
-      document.body.style.scrollBehavior = 'unset';
-    },
-    enableScroll() {
-      document.body.style.cssText = '';
-      document.body.style.scrollBehavior = '';
-    }
+    enableScroll();
   };
 })();

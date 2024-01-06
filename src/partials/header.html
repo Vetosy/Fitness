@@ -6,7 +6,7 @@
     <nav class="header__nav" aria-label="Main navigation" data-menu>
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <a href="#" class="header__nav-link" data-scroll data-menu-item>Home</a>
+          <a href="#body" class="header__nav-link" data-scroll data-menu-item>Home</a>
         </li>
         <li class="header__nav-item">
           <a href="#motivation" class="header__nav-link" data-scroll data-menu-item>Motivation</a>
@@ -23,33 +23,43 @@
       </ul>
     </nav>
     <div class="header__user-nav">
-      <button class="header__modal-btn btn js-open-modal" type="button" title="Open modal menu">Start class</button>
-      <dialog class="header__modal-wrapper js-modal">
+      <button class="header__modal-btn btn btn--modal js-open-modal" type="button" title="Open modal menu">Sale</button>
+      <dialog class="header__modal-wrapper js-modal" aria-labelledby="dialog-header" aria-describedby="dialog-content">
         <div class="header__modal-content">
-          <button class="header__modal-close btn js-close-modal" type="button">Close</button>
-          <div class="header__modal-text">
+          <button class="header__modal-close js-close-modal" type="button" aria-label="Close modal menu"
+            title="Close modal menu"></button>
+          <div class="header__modal-descr text" id="dialog-content">
             <p>Leave a request for a consultation right now and if you make a decision within 24 hours, you will receive
               a <mark class="header__modal-sale">20% discount</mark> on any tariff</p>
           </div>
-          <h2 class="header__modal-title">We have until the end of the promotion:</h2>
-          <ul class="header__modal-timer">
-            <li class="header__modal-item header__modal-item--day">
-              <span class="header__modal-value"></span>
-              <span class="header__modal-time"></span>
+          <h2 class="header__modal-title" id="dialog-header">We have until the end of the promotion:</h2>
+          <ul class="header__modal-timer js-timer">
+            <li class="header__modal-item">
+              <span class="header__modal-value js-value--days"></span>
+              <span class="header__modal-text js-text--days"></span>
             </li>
-            <li class="header__modal-item header__modal-item--hrs">
-              <span class="header__modal-value"></span>
-              <span class="header__modal-time"></span>
+            <li class="header__modal-item">
+              <span class="header__modal-value js-value--hrs"></span>
+              <span class="header__modal-text js-text--hrs"></span>
             </li>
-            <li class="header__modal-item header__modal-item--mins">
-              <span class="header__modal-value"></span>
-              <span class="header__modal-time"></span>
+            <li class="header__modal-item">
+              <span class="header__modal-value js-value--mins"></span>
+              <span class="header__modal-text js-text--mins"></span>
             </li>
           </ul>
-          <form class="header__modal-form" action="#" method="dialog">
-            <input class="header__form-input input" type="text">
-            <input class="header__form-input input" type="text">
-            <button class="header__form-btn btn btn--transparent" type="submit">Send</button>
+          <form class="header__modal-form" action="#" method="dialog" id="header-modal-form">
+            <label class="header__modal-form-label visually-hidden" for="modal-username">
+              Name
+            </label>
+            <input class="header__modal-form-input input" type="text" name="sale-name" aria-required="true" required
+              autocomplete="name" title="Please enter your full name" id="modal-username" placeholder="Name">
+            <label class="header__modal-form-label visually-hidden" for="modal-email">
+              Email
+            </label>
+            <input class="header__modal-form-input input" type="email" name="sale-email" aria-required="true" required
+              autocomplete="email" title="Enter your email" id="modal-email" placeholder="Email">
+            <button class="header__form-btn btn btn--modal btn--centered" type="submit"
+              form="header-modal-form">Send</button>
           </form>
         </div>
       </dialog>

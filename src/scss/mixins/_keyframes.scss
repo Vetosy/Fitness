@@ -11,3 +11,11 @@
     }
   }
 }
+
+@mixin separator {
+  @keyframes separator {
+    50% {
+      opacity: 0;
+    }
+  }
+}

@@ -144,18 +144,127 @@
     background-color: var(--color-dark-alternate);
     border: var(--border);
     border-radius: var(--border-radius);
+    inset-block-start: 0;
+    inset-block-end: 0;
+    display: block;
+    box-shadow: 0 0 0 100vmax var(--overlay-shadow);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-duration) ease, visibility var(--transition-duration) ease,
+      background-color var(--transition-duration) ease;
+
+    &[open] {
+      opacity: 1;
+      visibility: visible;
+    }
 
     &::backdrop {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: transparent;
       cursor: pointer;
     }
   }
 
   &__modal-content {
+    position: relative;
+    max-width: 700px;
     padding: 50px;
+
+    @include mobile {
+      padding: 50px 25px;
+    }
   }
 
   &__modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 10px;
+    aspect-ratio: 1;
+    background: url(../img/close-modal-icon.svg) center/cover no-repeat;
+    padding: 20px;
+  }
+
+  &__modal-descr {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__modal-sale {
+    background-color: var(--color-modal);
+    color: var(--color-dark);
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    padding: 4px;
+  }
+
+  &__modal-title {
+    font-size: 32px;
+    color: var(--color-light);
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include tablet {
+      font-size: 28px;
+    }
+
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+
+  &__modal-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 35px;
+    margin-bottom: 35px;
+
+    @include mobile {
+      column-gap: 15px;
+    }
+  }
+
+  &__modal-item {
+    @include separator;
+
+    color: var(--color-modal);
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+
+    &:not(:last-child) {
+      &::after {
+        content: ":";
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 15px);
+        translate: 0 -50%;
+        animation: 2s infinite separator;
+
+        @include mobile {
+          left: calc(100% + 5px);
+        }
+      }
+    }
+
+    @include tablet {
+      font-size: 26px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__modal-form-input {
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
   }
 
   &__burger-wrapper {
