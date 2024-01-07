@@ -1,19 +1,12 @@
 import Swiper from 'swiper';
-
-import {
-  Pagination,
-  A11y,
-  Keyboard,
-  Autoplay,
-  Parallax
-} from 'swiper/modules';
+import { Pagination, A11y, Keyboard, Autoplay, Parallax } from 'swiper/modules';
 
 Swiper.use([Pagination, A11y, Keyboard, Autoplay, Parallax]);
 
 const bodyStyle = window.getComputedStyle(document.body);
 const gap = parseInt(bodyStyle.getPropertyValue('--family-swiper-gap'));
-const progressCircle = document.querySelector(".js-autoplay-progress-icon");
-const progressContent = document.querySelector(".js-autoplay-progress-content");
+const progressCircle = document.querySelector('.js-autoplay-progress-icon');
+const progressContent = document.querySelector('.js-autoplay-progress-content');
 
 const bannerSwiper = new Swiper('.banner__swiper', {
   slidesPerView: 'auto',
@@ -29,7 +22,7 @@ const bannerSwiper = new Swiper('.banner__swiper', {
   },
   autoplay: {
     delay: 3000,
-    disableOnInteraction: false
+    disableOnInteraction: false,
   },
   a11y: {
     enabled: true,
@@ -42,14 +35,14 @@ const bannerSwiper = new Swiper('.banner__swiper', {
   keyboard: {
     enabled: true,
     onlyInViewport: true,
-    pageUpDown: true
+    pageUpDown: true,
   },
   on: {
     autoplayTimeLeft(s, time, progress) {
-      progressCircle.style.setProperty("--progress", 1 - progress);
+      progressCircle.style.setProperty('--progress', 1 - progress);
       progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-    }
-  }
+    },
+  },
 });
 
 const familySwiper = new Swiper('.family__swiper', {
@@ -69,6 +62,6 @@ const familySwiper = new Swiper('.family__swiper', {
   keyboard: {
     enabled: true,
     onlyInViewport: true,
-    pageUpDown: true
-  }
+    pageUpDown: true,
+  },
 });

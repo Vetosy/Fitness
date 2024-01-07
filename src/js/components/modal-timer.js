@@ -1,5 +1,6 @@
 function updateTimerElements(container) {
-  const newYear = new Date('Dec 1 2024 00:00:00');
+  const dateEndEvent = container.getAttribute('data-date-timer-end-event');
+  const newYear = new Date(dateEndEvent);
 
   const daysVal = container.querySelector('.js-value--days');
   const hoursVal = container.querySelector('.js-value--hrs');
@@ -11,7 +12,7 @@ function updateTimerElements(container) {
 
   function declOfNum(number, titles) {
     let cases = [2, 0, 1, 1, 1, 2];
-    return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
+    return titles[number % 100 > 4 && number % 100 < 20 ? 2 : cases[number % 10 < 5 ? number % 10 : 5]];
   }
 
   const timeCount = () => {
@@ -38,7 +39,7 @@ function updateTimerElements(container) {
 document.addEventListener('DOMContentLoaded', () => {
   const timerContainers = document.querySelectorAll('.js-timer');
 
-  timerContainers.forEach(container => {
+  timerContainers.forEach((container) => {
     updateTimerElements(container);
   });
 });

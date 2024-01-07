@@ -5,3 +5,5 @@ import './components/swiper';
 import './components/custom-select';
 import './components/modal';
 import './components/modal-timer';
+import './components/validate-form';
+import './components/popup-message-form';

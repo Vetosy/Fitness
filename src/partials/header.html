@@ -23,17 +23,18 @@
       </ul>
     </nav>
     <div class="header__user-nav">
-      <button class="header__modal-btn btn btn--modal js-open-modal" type="button" title="Open modal menu">Sale</button>
+      <button class="header__modal-btn btn btn--modal js-open-modal" type="button" aria-label="Open sale menu"
+        title="Open sale menu">Sale</button>
       <dialog class="header__modal-wrapper js-modal" aria-labelledby="dialog-header" aria-describedby="dialog-content">
         <div class="header__modal-content">
-          <button class="header__modal-close js-close-modal" type="button" aria-label="Close modal menu"
-            title="Close modal menu"></button>
+          <button class="header__modal-close js-close-modal" type="button" aria-label="Close sale menu"
+            title="Close sale menu"></button>
           <div class="header__modal-descr text" id="dialog-content">
             <p>Leave a request for a consultation right now and if you make a decision within 24 hours, you will receive
               a <mark class="header__modal-sale">20% discount</mark> on any tariff</p>
           </div>
           <h2 class="header__modal-title" id="dialog-header">We have until the end of the promotion:</h2>
-          <ul class="header__modal-timer js-timer">
+          <ul class="header__modal-timer js-timer" data-date-timer-end-event="Dec 1 2024 00:00:00">
             <li class="header__modal-item">
               <span class="header__modal-value js-value--days"></span>
               <span class="header__modal-text js-text--days"></span>
@@ -61,13 +62,21 @@
             <button class="header__form-btn btn btn--modal btn--centered" type="submit"
               form="header-modal-form">Send</button>
           </form>
+          <div class="header__modal-success success">
+            <div class="success__content">
+              <h2 class="success__title">Success!</h2>
+              <p class="success__text">The form has been successfully submitted. Thank you!</p>
+              <button class="success__btn" aria-label="close" type="button">Close</button>
+            </div>
+          </div>
         </div>
-      </dialog>
-      <div class="header__burger-wrapper">
-        <button class="header__burger" type="button" aria-label="Open menu" aria-expanded="false" data-burger>
-          <span class="header__burger-line"></span>
-        </button>
-      </div>
     </div>
+    </dialog>
+    <div class="header__burger-wrapper">
+      <button class="header__burger" type="button" aria-label="Open menu" aria-expanded="false" data-burger>
+        <span class="header__burger-line"></span>
+      </button>
+    </div>
+  </div>
   </div>
 </header>

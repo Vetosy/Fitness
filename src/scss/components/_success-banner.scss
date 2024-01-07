@@ -1,0 +1,73 @@
+.success {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &__content {
+    max-width: 500px;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 18px;
+    margin-bottom: 10px;
+    color: #ac1608;
+    letter-spacing: 0px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    background-color: #ac1608;
+    padding: 10px 58px;
+    border-radius: 21px;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 700;
+    border: none;
+    transition: background-color 0.3s ease;
+
+    @include hover {
+      background-color: #303030;
+      color: #fff;
+    }
+
+    &:focus {
+      outline: 2px solid #ac1608;
+      outline-offset: 3px;
+    }
+  }
+}
