@@ -2,13 +2,13 @@ function updateTimerElements(container) {
   const dateEndEvent = container.getAttribute('data-date-timer-end-event');
   const newYear = new Date(dateEndEvent);
 
-  const daysVal = container.querySelector('.js-value--days');
-  const hoursVal = container.querySelector('.js-value--hrs');
-  const minutesVal = container.querySelector('.js-value--mins');
+  const daysVal = container.querySelector('.js-value-days');
+  const hoursVal = container.querySelector('.js-value-hrs');
+  const minutesVal = container.querySelector('.js-value-mins');
 
-  const daysText = container.querySelector('.js-text--days');
-  const hoursText = container.querySelector('.js-text--hrs');
-  const minutesText = container.querySelector('.js-text--mins');
+  const daysText = container.querySelector('.js-text-days');
+  const hoursText = container.querySelector('.js-text-hrs');
+  const minutesText = container.querySelector('.js-text-mins');
 
   function declOfNum(number, titles) {
     let cases = [2, 0, 1, 1, 1, 2];

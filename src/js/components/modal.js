@@ -7,12 +7,12 @@ const closeModal = document.querySelector('.js-close-modal');
 
 openModal.addEventListener('click', () => {
   modal.showModal();
-  disableScroll();
+  // disableScroll();
 });
 
 closeModal.addEventListener('click', () => {
   modal.close();
-  enableScroll();
+  // enableScroll();
 });
 
 modal.addEventListener('click', (e) => {
@@ -21,6 +21,6 @@ modal.addEventListener('click', (e) => {
 
   if (isClickedOnBackDrop) {
     dialogModal.close();
-    enableScroll();
+    // enableScroll();
   }
 });

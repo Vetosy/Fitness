@@ -1,25 +1,7 @@
-import { popupMessageForm } from '../components/popup-message-form';
-// import IMask from 'imask';
 import JustValidate from 'just-validate';
+import { popupMessageForm } from './popup-message-form';
 
-const headerModalValidation = new JustValidate('#header-modal-form');
-// const telInputPizzaLunch = document.getElementById('pizza-lunch-tel');
-// const telMaskPizzaLunch = IMask(telInputPizzaLunch, {
-//   mask: '(000) 000-0000',
-// });
-
-// const zipInputPizzaLunch = document.getElementById('pizza-lunch-zip');
-// zipInputPizzaLunch.addEventListener('input', function () {
-//   const value = zipInputPizzaLunch.value.replace(/\D/g, '');
-
-//   if (value.length > 5) {
-//     zipInputPizzaLunch.value = value.slice(0, 5);
-//   } else {
-//     zipInputPizzaLunch.value = value;
-//   }
-// });
-
-function showSuccessMessage(event) {
+const showSuccessModal = (event) => {
   const formEntries = new FormData(event.target).entries();
   const json = Object.assign(
     ...Array.from(formEntries, ([x, y]) => ({
@@ -43,15 +25,22 @@ function showSuccessMessage(event) {
     .then((data) => {
       popupMessageForm('Success!', 'The form has been successfully submitted. Thank you!');
       event.target.reset();
+      headerModalValidation.refresh();
     })
     .catch((error) => {
       popupMessageForm('Error', 'An error occurred. Please try again later.');
       event.target.reset();
       console.error(error);
+      headerModalValidation.refresh();
     });
-}
+};
 
-headerModalValidation.onSuccess(showSuccessMessage);
+const headerModalValidation = new JustValidate('#header-modal-form', {
+  validateBeforeSubmitting: true,
+  tooltip: {
+    position: 'bottom',
+  },
+});
 
 headerModalValidation
   .addField('#modal-username', [
@@ -72,4 +61,7 @@ headerModalValidation
     {
       rule: 'email',
     },
-  ]);
+  ])
+  .onSuccess((event) => {
+    showSuccessModal(event);
+  });

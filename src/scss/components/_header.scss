@@ -263,7 +263,25 @@
 
   &__modal-form-input {
     &:not(:last-child) {
-      margin-bottom: 35px;
+      margin-bottom: 50px;
+    }
+
+    &.just-validate-error-field {
+      border: 1px solid var(--color-validate-error);
+      background: url(../img/form-validate-error.svg) center right 25px/25px 25px no-repeat;
+
+      &:focus {
+        border: 1px solid var(--color-validate-error);
+      }
+    }
+
+    &.just-validate-success-field {
+      border: 1px solid var(--color-validate-success);
+      background: url(../img/form-validate-success.svg) center right 25px/25px 25px no-repeat;
+
+      &:focus {
+        border: 1px solid var(--color-validate-success);
+      }
     }
   }
 
@@ -342,5 +360,17 @@
         transition: transform 0.3s ease-in-out;
       }
     }
+  }
+}
+
+.just-validate-error-label[data-tooltip="true"] {
+  font-size: 16px;
+  color: var(--color-light) !important;
+  background-color: transparent !important;
+  border-radius: 30px !important;
+  border: var(--border);
+
+  &::before {
+    border-bottom: solid 5px var(--color-light) !important;
   }
 }
