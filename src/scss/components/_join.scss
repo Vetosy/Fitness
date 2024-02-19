@@ -2,7 +2,7 @@
   background-color: var(--color-dark-alternate);
 
   &__wrapper {
-    @include image-set("../img/join/join-bg", center, cover, no-repeat);
+    @include image-set('../img/join/join-bg', center, cover, no-repeat);
 
     position: relative;
     display: flex;
@@ -40,10 +40,11 @@
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
-    transition: color var(--transition-duration) ease, border var(--transition-duration) ease;
+    transition: color var(--transition-duration) ease,
+      border var(--transition-duration) ease;
 
     &::after {
-      content: "";
+      content: '';
       width: 26px;
       aspect-ratio: 1;
       background: url(../img/arrow-top-right.svg) center/contain no-repeat;
@@ -94,7 +95,7 @@
     text-transform: uppercase;
 
     &::after {
-      content: "";
+      content: '';
       display: inline-block;
       height: 0.7em;
       aspect-ratio: 1;
