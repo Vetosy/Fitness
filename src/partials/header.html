@@ -1,40 +1,83 @@
 <header class="header">
   <div class="header__container container">
     <a class="header__logo" href="#">
-      <img class="header__icon" src="img/logo.svg" alt="Kropp logo" width="135" height="25" loading="lazy">
+      <img
+        class="header__icon"
+        src="img/logo.svg"
+        alt="Kropp logo"
+        width="135"
+        height="25"
+        loading="lazy"
+      />
     </a>
     <nav class="header__nav" aria-label="Main navigation" data-menu>
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <a href="#body" class="header__nav-link" data-scroll data-menu-item>Home</a>
+          <a href="#body" class="header__nav-link" data-scroll data-menu-item
+            >Home</a
+          >
         </li>
         <li class="header__nav-item">
-          <a href="#motivation" class="header__nav-link" data-scroll data-menu-item>Motivation</a>
+          <a
+            href="#motivation"
+            class="header__nav-link"
+            data-scroll
+            data-menu-item
+            >Motivation</a
+          >
         </li>
         <li class="header__nav-item">
-          <a href="#join" class="header__nav-link" data-scroll data-menu-item>Join us</a>
+          <a href="#join" class="header__nav-link" data-scroll data-menu-item
+            >Join us</a
+          >
         </li>
         <li class="header__nav-item">
-          <a href="#family" class="header__nav-link" data-scroll data-menu-item>Our family</a>
+          <a href="#family" class="header__nav-link" data-scroll data-menu-item
+            >Our family</a
+          >
         </li>
         <li class="header__nav-item">
-          <a href="#contact" class="header__nav-link" data-scroll data-menu-item>Contact</a>
+          <a href="#contact" class="header__nav-link" data-scroll data-menu-item
+            >Contact</a
+          >
         </li>
       </ul>
     </nav>
     <div class="header__user-nav">
-      <button class="header__modal-btn btn btn--modal js-open-modal" type="button" aria-label="Open sale menu"
-        title="Open sale menu">Sale</button>
-      <dialog class="header__modal-wrapper js-modal" aria-labelledby="dialog-header" aria-describedby="dialog-content">
+      <button
+        class="header__modal-btn btn btn--modal js-open-modal"
+        type="button"
+        aria-label="Open sale menu"
+        title="Open sale menu"
+      >
+        Sale
+      </button>
+      <dialog
+        class="header__modal-wrapper js-modal"
+        aria-labelledby="dialog-header"
+        aria-describedby="dialog-content"
+      >
         <div class="header__modal-content">
-          <button class="header__modal-close js-close-modal" type="button" aria-label="Close sale menu"
-            title="Close sale menu"></button>
+          <button
+            class="header__modal-close js-close-modal"
+            type="button"
+            aria-label="Close sale menu"
+            title="Close sale menu"
+          ></button>
           <div class="header__modal-descr text" id="dialog-content">
-            <p>Leave a request for a consultation right now and if you make a decision within 24 hours, you will receive
-              a <mark class="header__modal-sale">20% discount</mark> on any tariff</p>
+            <p>
+              Leave a request for a consultation right now and if you make a
+              decision within 24 hours, you will receive a
+              <mark class="header__modal-sale">20% discount</mark> on any tariff
+            </p>
           </div>
-          <h2 class="header__modal-title" id="dialog-header">We have until the end of the promotion:</h2>
-          <ul class="header__modal-timer js-timer" data-date-timer-end-event="Dec 1 2024 00:00:00">
+          <h2 class="header__modal-title" id="dialog-header">
+            We have until the end of the promotion:
+          </h2>
+          <ul
+            class="header__modal-timer js-timer"
+            data-date-timer-end-event="Dec 1 2024 00:00:00"
+          >
             <li class="header__modal-item">
               <span class="header__modal-value js-value-days"></span>
               <span class="header__modal-text js-text-days"></span>
@@ -48,19 +91,53 @@
               <span class="header__modal-text js-text-mins"></span>
             </li>
           </ul>
-          <form class="header__modal-form" action="#" method="dialog" id="header-modal-form">
-            <label class="header__modal-form-label visually-hidden" for="modal-username">
+          <form
+            class="header__modal-form"
+            action="#"
+            method="dialog"
+            id="header-modal-form"
+          >
+            <label
+              class="header__modal-form-label visually-hidden"
+              for="modal-username"
+            >
               Name
             </label>
-            <input class="header__modal-form-input input" type="text" name="sale-name" aria-required="true" required
-              autocomplete="name" title="Please enter your full name" id="modal-username" placeholder="Name">
-            <label class="header__modal-form-label visually-hidden" for="modal-email">
+            <input
+              class="header__modal-form-input input"
+              type="text"
+              name="sale-name"
+              aria-required="true"
+              required
+              autocomplete="name"
+              title="Please enter your full name"
+              id="modal-username"
+              placeholder="Name"
+            />
+            <label
+              class="header__modal-form-label visually-hidden"
+              for="modal-email"
+            >
               Email
             </label>
-            <input class="header__modal-form-input input" type="email" name="sale-email" aria-required="true" required
-              autocomplete="email" title="Enter your email" id="modal-email" placeholder="Email">
-            <button class="header__form-btn btn btn--modal btn--centered" type="submit"
-              form="header-modal-form">Send</button>
+            <input
+              class="header__modal-form-input input"
+              type="email"
+              name="sale-email"
+              aria-required="true"
+              required
+              autocomplete="email"
+              title="Enter your email"
+              id="modal-email"
+              placeholder="Email"
+            />
+            <button
+              class="header__form-btn btn btn--modal btn--centered"
+              type="submit"
+              form="header-modal-form"
+            >
+              Send
+            </button>
           </form>
           <div class="header__modal-success success">
             <div class="success__content">
@@ -71,13 +148,18 @@
             </div>
           </div>
         </div>
+      </dialog>
+      <div class="header__burger-wrapper">
+        <button
+          class="header__burger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          data-burger
+        >
+          <span class="header__burger-line"></span>
+        </button>
+      </div>
     </div>
-    </dialog>
-    <div class="header__burger-wrapper">
-      <button class="header__burger" type="button" aria-label="Open menu" aria-expanded="false" data-burger>
-        <span class="header__burger-line"></span>
-      </button>
-    </div>
-  </div>
   </div>
 </header>
