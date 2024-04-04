@@ -40,8 +40,7 @@
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
-    transition: color var(--transition-duration) ease,
-      border var(--transition-duration) ease;
+    transition: color var(--transition-duration) ease, border var(--transition-duration) ease;
 
     &::after {
       content: '';
